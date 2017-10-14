@@ -34,6 +34,13 @@ int main(void)
 	struct box_props box = {YES, YELLOW, YES, GREEN, DASHED};
 	printf("Original box settings:\n");
 	show_settings(&box);
+
+	box.opaque = NO;
+	box.fill_color = WHITE;
+	box.border_style = MAGENTA;
+	box.border_style = SOLID;
+	printf("\nModified box settings:\n");
+	show_settings(&box);
 	return 0;
 }
 void show_settings(const struct box_props *pb)
